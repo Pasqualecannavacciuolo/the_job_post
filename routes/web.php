@@ -13,9 +13,9 @@ Route::get('/', function () {
 Route::get('/register', [RegisteredUserController::class, 'show']);
 Route::post('/register', [RegisteredUserController::class, 'register']);
 Route::get('/login', [SessionController::class, 'show']);
-Route::post('/login', [SessionController::class, 'login']);
+Route::post('/login', [SessionController::class, 'login'])->name('login');
 Route::post('/logout', [SessionController::class, 'logout']);
 
 
 // Job
-Route::get('/jobs', [JobController::class, 'show']);
+Route::get('/jobs', [JobController::class, 'show'])->middleware('auth');
