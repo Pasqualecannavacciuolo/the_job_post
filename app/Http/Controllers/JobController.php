@@ -9,7 +9,7 @@ class JobController extends Controller
 {
     public function show(): View
     {
-        $jobs = Job::with('business')->latest()->simplePaginate(2);
+        $jobs = Job::with('business')->latest()->simplePaginate(9);
         return view('job.index', ['jobs' => $jobs]);
     }
 
