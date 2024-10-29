@@ -1,14 +1,15 @@
 <x-layout>
-    <div class="border rounded-md bg-zinc-50 lg:p-5 mt-48 lg:mt-32">
-        <!-- Form -->
-        <div class="lg:w-[500px] flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+    <div class="border rounded-md bg-zinc-50 p-4 lg:p-5">
+        <div class="lg:w-[500px] flex flex-col justify-center mx-auto px-6 py-12 lg:px-8">
+            <!-- Header -->
             <div class="sm:mx-auto sm:w-full sm:max-w-lg">
                 <img class="mx-auto h-10 w-auto" src="/images/logo.svg" alt="The Job Post">
-                <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Log in</h2>
+                <h2 class="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Log in</h2>
             </div>
 
-            <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-xl">
-                <form class="space-y-6" action="/login" method="POST">
+            <div class="sm:mx-auto sm:w-full sm:max-w-xl flex flex-col items-center">
+                <!-- Form -->
+                <form class="w-72 lg:w-96 space-y-6" action="/login" method="POST">
                     @csrf
                     <!-- Email -->
                     <div>
@@ -36,13 +37,9 @@
 
                     <div>
                         <x-buttons.form-button type="submit">Log in</x-buttons.form-button>
-
                     </div>
                 </form>
-
-
             </div>
         </div>
-
     </div>
 </x-layout>

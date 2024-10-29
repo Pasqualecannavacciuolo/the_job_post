@@ -7,8 +7,8 @@
                 <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Registrati</h2>
             </div>
 
-            <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-xl">
-                <form class="space-y-6" action="/register" method="POST">
+            <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-xl flex flex-col items-center">
+                <form class="space-y-6 w-72 lg:w-96 " action="/register" method="POST">
                     @csrf
                     <!-- First Name -->
                     <div>
