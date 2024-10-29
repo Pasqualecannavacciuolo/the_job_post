@@ -1,6 +1,5 @@
 <x-layout>
-    <div
-        class="min-h-screen flex items-center justify-center overflow-hidden lg:rounded-tl-2xl lg:rounded-bl-2xl m-5 lg:m-0">
+    <div class="flex items-center justify-center overflow-hidden lg:rounded-tl-2xl lg:rounded-bl-2xl m-5 mt-11 lg:mt-32">
         <div class="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col gap-8 items-center lg:flex-row lg:gap-16">
                 <div class="w-full xl:col-span-5 lg:col-span-6">
