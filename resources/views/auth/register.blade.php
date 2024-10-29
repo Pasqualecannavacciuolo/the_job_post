@@ -1,13 +1,13 @@
 <x-layout>
-    <div class="border rounded-md bg-zinc-50 lg:p-5 mt-48 lg:mt-32">
+    <div class="border rounded-md bg-zinc-50 lg:p-5 mt-11">
         <!-- Form -->
         <div class="lg:w-[500px] flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
             <div class="sm:mx-auto sm:w-full sm:max-w-lg">
                 <img class="mx-auto h-10 w-auto" src="/images/logo.svg" alt="The Job Post">
-                <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Registrati</h2>
+                <h2 class="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Registrati</h2>
             </div>
 
-            <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-xl flex flex-col items-center">
+            <div class="sm:mx-auto sm:w-full sm:max-w-xl flex flex-col items-center">
                 <form class="space-y-6 w-72 lg:w-96 " action="/register" method="POST">
                     @csrf
                     <!-- First Name -->

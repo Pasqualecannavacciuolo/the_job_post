@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="border rounded-md bg-zinc-50 p-4 lg:p-5">
+    <div class="mt-48 border rounded-md bg-zinc-50 p-4 lg:p-5">
         <div class="lg:w-[500px] flex flex-col justify-center mx-auto px-6 py-12 lg:px-8">
             <!-- Header -->
             <div class="sm:mx-auto sm:w-full sm:max-w-lg">
