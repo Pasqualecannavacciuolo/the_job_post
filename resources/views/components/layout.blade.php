@@ -108,10 +108,11 @@
         </header>
         {{-- CONTENUTO HERO --}}
         <main>
-            <div class="relative isolate h-screen flex mt-32 lg:px-8 m-5">
+            <div class="relative isolate flex items-center justify-center h-screen m-5 lg:m-0">
                 {{ $slot }}
             </div>
         </main>
+
     </div>
 
     <!-- Codice JavaScript -->
