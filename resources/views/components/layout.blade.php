@@ -36,7 +36,7 @@
                     </button>
                 </div>
                 <div class="hidden lg:flex lg:gap-x-12">
-                    <a href="#"
+                    <a href="/jobs"
                         class="text-md font-semibold leading-6 text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">Offerte</a>
                     <a href="#"
                         class="text-md font-semibold leading-6 text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">Aziende</a>
@@ -108,8 +108,7 @@
         </header>
         {{-- CONTENUTO HERO --}}
         <main>
-            <div
-                class="relative isolate h-screen flex items-center justify-center lg:px-8 lg:rounded-tl-2xl lg:rounded-bl-2xl m-5 lg:m-0">
+            <div class="relative isolate h-screen flex mt-32 lg:px-8 m-5">
                 {{ $slot }}
             </div>
         </main>
