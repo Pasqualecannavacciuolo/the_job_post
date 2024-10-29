@@ -24,7 +24,7 @@
                             <p class="text-md">{{ $job->salary }}</p>
                         </div>
                         <div>
-                            <x-buttons.default-button>Scopri</x-buttons.default-button>
+                            <x-navigation.link-btn href="/jobs/{{ $job->id }}">Scopri</x-navigation.link-btn>
                         </div>
                     </div>
                 </div>

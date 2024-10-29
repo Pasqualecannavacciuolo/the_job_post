@@ -12,4 +12,10 @@ class JobController extends Controller
         $jobs = Job::with('business')->latest()->simplePaginate(2);
         return view('job.index', ['jobs' => $jobs]);
     }
+
+    public function show_details(int $id): View
+    {
+        $job = Job::with('business')->findOrFail($id);
+        return view('job.details', ['job' => $job]);
+    }
 }

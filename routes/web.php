@@ -19,3 +19,4 @@ Route::post('/logout', [SessionController::class, 'logout']);
 
 // Job
 Route::get('/jobs', [JobController::class, 'show'])->middleware('auth');
+Route::get('/jobs/{id}', [JobController::class, 'show_details'])->middleware('auth');
