@@ -27,20 +27,20 @@
                     </div>
                     <!-- JOB OFFER INFO -->
                     <div class="flex flex-col items-start gap-1">
-                        <div class="flex flex-row gap-1">
+                        <div class="flex flex-row gap-5">
                             <img class="w-5 h-5" src="/images/ui/calendar.png" alt="calendar icon">
                             <p class="text-sm text-gray-500">{{ date('d-m-Y', strtotime($job->created_at)) }}</p>
                         </div>
-                        <div class="flex flex-row gap-1">
+                        <div class="flex flex-row gap-5">
                             <img class="w-5 h-5" src="/images/ui/position.png" alt="position icon">
                             <p class="text-sm">{{ $job->position }}</p>
                         </div>
-                        <div class="flex flex-row gap-1">
+                        <div class="flex flex-row gap-5">
                             <img class="w-5 h-5" src="/images/ui/money.png" alt="money icon">
                             <p class="text-sm font-light">{{ $job->salary }}</p>
                         </div>
                     </div>
-                    <x-navigation.link-btn href="#">Applica</x-navigation.link-btn>
+                    <x-navigation.link-btn href="#">Invia la tua candidatura</x-navigation.link-btn>
                 </div>
             </div>
         </div>
