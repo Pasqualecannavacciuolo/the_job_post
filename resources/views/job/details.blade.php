@@ -1,7 +1,8 @@
 <x-layout>
-    <div class="flex flex-col gap-5 p-4 lg:p-7">
-        <div>
+    <div class="flex flex-col gap-5 p-7 mt-3 lg:mt-0 lg:p-7">
+        <div class="flex flex-col gap-3 mb-5">
             @can('edit', $job)
+                <h3 class="text-md font-semibold">Azioni possibili</h3>
                 <div>
                     <x-navigation.link-btn href="/jobs/{{ $job->id }}/edit">Modifica</x-navigation.link-btn>
                 </div>
@@ -9,7 +10,7 @@
         </div>
         <!-- JOB OFFER -->
         <div class="flex flex-col gap-5">
-            <div class="flex flex-row mt-11 gap-32">
+            <div class="flex flex-col lg:flex-row mt-3 gap-7 lg:gap-32">
                 <!-- Job Info -->
                 <div class="flex flex-col gap-3 max-w-[950px] text-justify">
                     <h1 class="text-xl font-bold">{{ $job->title }}</h1>
