@@ -24,7 +24,7 @@ class SessionController extends Controller
         // Attempt to log in the user
         if (!Auth::attempt($validatedAttributes)) {
             throw ValidationException::withMessages([
-                'attempt' => 'Credenziali errate, ricontrolla i campi di input e ritenta.'
+                'attempt' => 'Credenziali errate, ritenta.'
             ]);
         }
         // regenerate session token
