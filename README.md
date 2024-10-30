@@ -16,15 +16,15 @@ php artisan route:list --except-vendor
 
 ## Tutti i route registrati
 
-| Metodo | Route      | Controller                        |
-| ------ | ---------- | --------------------------------- | ----------------------------- |
-| GET    | HEAD       | /                                 |                               |
-| GET    | HEAD       | jobs                              | JobController@show            |
-| GET    | HEAD       | jobs/{job}                        | JobController@show_details    |
-| PATCH  | jobs/{job} | JobController@edit_job            |
-| GET    | HEAD       | jobs/{job}/edit                   | JobController@show_edit       |
-| GET    | HEAD       | login                             | SessionController@show        |
-| POST   | login      | login › SessionController@login   |
-| POST   | logout     | SessionController@logout          |
-| GET    | HEAD       | register                          | RegisteredUserController@show |
-| POST   | register   | RegisteredUserController@register |
+| Metodo   | Route           | Controller                        |
+| -------- | --------------- | --------------------------------- |
+| GET-HEAD | /               |                                   |
+| GET-HEAD | jobs            | JobController@show                |
+| GET-HEAD | jobs/{job}      | JobController@show_details        |
+| PATCH    | jobs/{job}      | JobController@edit_job            |
+| GET-HEAD | jobs/{job}/edit | JobController@show_edit           |
+| GET-HEAD | login           | SessionController@show            |
+| POST     | login           | login › SessionController@login   |
+| POST     | logout          | SessionController@logout          |
+| GET-HEAD | register        | RegisteredUserController@show     |
+| POST     | register        | RegisteredUserController@register |
