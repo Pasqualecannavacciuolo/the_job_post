@@ -1,0 +1,24 @@
+[ Eseguire backup database ]
+    !! Entra nella shell del container docker di postgresql, ma non entrare in psql
+    root@02904fdefe30: pg_dump -U <nome_user_container_docker> -d <database_dove_eseguire_il_backup> > /home/<nome_file>.dump
+    Esempio
+    root@02904fdefe30: pg_dump -U testuser -d the_job_post > /home/backup.dump
+
+[ Copiare tramite terminale il backup da Docker al computer host ]
+    !! Esegui questo comando nel terminale del tuo host locale
+    ~: docker cp postgres-test:/home/backup.dump /Users/pasqualecannavacciuolo/Documents
+
+[ Creare il nuovo database su docker ]
+    !! Entra nella shell del container docker di postgresql, ma non entrare in psql
+    root@02904fdefe30: psql -U testuser -d testdb --> Dove testuser e testdb sono i dati inseriti quando si e creato il container docker
+
+    [ Creazione di un nuovo utente ]
+    testdb=# CREATE USER laravel_user WITH PASSWORD laravel_password;
+    testdb=# CREATE DATABASE the_job_post_backup;
+    testdb=# GRANT ALL PRIVILEGES ON DATABASE the_job_post_backup TO laravel_user;
+    testdb=# ALTER DATABASE the_job_post_backup OWNER TO laravel_user;
+    \q
+
+    !! Una volta uscito da psql con \q nella shell del container docker esegui
+    root@02904fdefe30: psql -U testuser -d the_job_post_backup < /home/backup.dump
+
