@@ -1,30 +1,43 @@
 <x-layout>
     <div class="flex flex-col gap-5 p-4 lg:p-7">
-        <h1 class="p-1 text-xl font-bold">{{ $job->title }}</h1>
+        <div>
+            @can('edit', $job)
+                <div>
+                    <x-navigation.link-btn href="/jobs/{{ $job->id }}/edit">Modifica</x-navigation.link-btn>
+                </div>
+            @endcan
+        </div>
+        <!-- JOB OFFER -->
         <div class="flex flex-col gap-5">
-            <!-- JOB OFFER -->
-            <div class="flex flex-col w-full bg-zinc-50 rounded-md shadow-md">
-                <div class="flex flex-row p-4 justify-between">
-                    <div class="flex flex-col gap-1">
-                        <p class="text-xs text-zinc-500">{{ $job->business->name }}</p>
-                        <h1 class="font-semibold">{{ $job->title }}</h1>
-                    </div>
-                    <div>
-                        <x-badges.badge>{{ $job->status }}</x-badges.badge>
-                    </div>
+            <div class="flex flex-row mt-11 gap-32">
+                <!-- Job Info -->
+                <div class="flex flex-col gap-3 max-w-[950px] text-justify">
+                    <h1 class="text-xl font-bold">{{ $job->title }}</h1>
+                    <p>{!! $job->description !!}</p>
                 </div>
-                <div class="p-4">
-                    <p>
-                        {{ $job->description }}
-                    </p>
-                </div>
-                <div class="flex flex-row p-4 justify-between">
-                    <div class="flex flex-col gap-1">
-                        <p class="text-md">{{ $job->salary }}</p>
+                <!-- Business Info -->
+                <div class="flex flex-col items-center gap-7 bg-zinc-100 p-11 rounded-md min-w-[250px] h-fit">
+                    <!-- BUSINESS IMAGE -->
+                    <div class="w-10 h-auto">
+                        {!! str_replace(['width="144px"', 'height="144px"'], ['width="100%"', 'height="100%"'], $job->business->image) !!}
+                        <h3>{{ $job->business->name }}</h3>
                     </div>
-                    <div>
-                        <x-buttons.default-button>Scopri</x-buttons.default-button>
+                    <!-- JOB OFFER INFO -->
+                    <div class="flex flex-col items-start gap-1 mt-3">
+                        <div class="flex flex-row gap-1">
+                            <img class="w-5 h-5" src="/images/ui/calendar.png" alt="calendar icon">
+                            <p class="text-sm text-gray-500">{{ date('d-m-Y', strtotime($job->created_at)) }}</p>
+                        </div>
+                        <div class="flex flex-row gap-1">
+                            <img class="w-5 h-5" src="/images/ui/position.png" alt="position icon">
+                            <p class="text-sm">{{ $job->position }}</p>
+                        </div>
+                        <div class="flex flex-row gap-1">
+                            <img class="w-5 h-5" src="/images/ui/money.png" alt="money icon">
+                            <p class="text-sm font-light">{{ $job->salary }}</p>
+                        </div>
                     </div>
+                    <x-navigation.link-btn href="#">Applica</x-navigation.link-btn>
                 </div>
             </div>
         </div>
