@@ -6,7 +6,8 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"> <!-- Griglia responsive -->
             <!-- JOB OFFER -->
             @foreach ($jobs as $job)
-                <div class="flex flex-col bg-sky-50/10 rounded-md shadow-md min-h-[200px] max-w-[300px] w-full mx-auto">
+                <div
+                    class="flex flex-col bg-sky-50/10 rounded-md shadow-md h-[230px] min-w-[300px] max-w-[300px] w-full mx-auto">
                     <!-- Larghezza fissa per uniformità -->
                     <div class="flex flex-row p-4 justify-between">
                         <div class="flex flex-col gap-1">
@@ -24,7 +25,7 @@
                         <p class="text-xs text-zinc-500">{{ $job->business->name }}</p>
 
                         <!-- JOB TITLE -->
-                        <h1 class="font-semibold">{{ $job->title }}</h1>
+                        <h1 class="font-semibold truncate">{{ $job->title }}</h1> <!-- Truncate per il titolo -->
                     </div>
                     <div class="flex flex-row p-4 justify-between">
                         <div class="flex flex-col gap-1">
