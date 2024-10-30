@@ -23,6 +23,7 @@ class Job extends Model
         'description',
         'salary',
         'status',
+        'position',
         'business_id',
     ];
 
