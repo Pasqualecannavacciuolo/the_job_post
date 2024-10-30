@@ -17,13 +17,15 @@
                 </div>
                 <!-- Business Info -->
                 <div class="flex flex-col items-center gap-7 bg-zinc-100 p-11 rounded-md min-w-[250px] h-fit">
-                    <!-- BUSINESS IMAGE -->
-                    <div class="w-10 h-auto">
-                        {!! str_replace(['width="144px"', 'height="144px"'], ['width="100%"', 'height="100%"'], $job->business->image) !!}
+                    <div class="flex flex-col gap-1 items-center">
+                        <!-- BUSINESS IMAGE -->
+                        <div class="w-10 h-auto">
+                            {!! str_replace(['width="144px"', 'height="144px"'], ['width="100%"', 'height="100%"'], $job->business->image) !!}
+                        </div>
                         <h3>{{ $job->business->name }}</h3>
                     </div>
                     <!-- JOB OFFER INFO -->
-                    <div class="flex flex-col items-start gap-1 mt-3">
+                    <div class="flex flex-col items-start gap-1">
                         <div class="flex flex-row gap-1">
                             <img class="w-5 h-5" src="/images/ui/calendar.png" alt="calendar icon">
                             <p class="text-sm text-gray-500">{{ date('d-m-Y', strtotime($job->created_at)) }}</p>
